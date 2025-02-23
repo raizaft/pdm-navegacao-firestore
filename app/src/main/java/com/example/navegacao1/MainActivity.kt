@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.navegacao1.ui.telas.TelaCadastro
 import com.example.navegacao1.ui.telas.TelaLogin
 import com.example.navegacao1.ui.telas.TelaPrincipal
 import com.example.navegacao1.ui.theme.Navegacao1Theme
@@ -42,9 +43,12 @@ class MainActivity : ComponentActivity() {
                     val navController = rememberNavController()
                     NavHost(navController = navController, startDestination = "login") {
                         composable("login") {
-                            TelaLogin(modifier = Modifier.padding(innerPadding), onSigninClick = {
+                            TelaLogin(modifier = Modifier.padding(innerPadding), navController = navController, onSigninClick = {
                                 navController.navigate("principal")
                             })
+                        }
+                        composable("cadastro") {
+                            TelaCadastro(navController = navController)
                         }
                         composable("principal") {
                             TelaPrincipal(modifier = Modifier.padding(innerPadding), onLogoffClick = {

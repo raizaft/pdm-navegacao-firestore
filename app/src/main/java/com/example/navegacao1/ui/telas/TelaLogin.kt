@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.navegacao1.model.dados.UsuarioDAO
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,7 +28,7 @@ import kotlinx.coroutines.launch
 val usuarioDAO: UsuarioDAO = UsuarioDAO()
 
 @Composable
-fun TelaLogin(modifier: Modifier = Modifier, onSigninClick: () -> Unit ) {
+fun TelaLogin(modifier: Modifier = Modifier, navController: NavController, onSigninClick: () -> Unit ) {
     val context = LocalContext.current
     var scope = rememberCoroutineScope()
 
@@ -51,6 +52,13 @@ fun TelaLogin(modifier: Modifier = Modifier, onSigninClick: () -> Unit ) {
             }
         }) {
             Text("Entrar")
+        }
+
+        Spacer(modifier = Modifier.height(10.dp))
+        Button(modifier = Modifier.fillMaxWidth(), onClick = {
+            navController.navigate("cadastro")
+        }) {
+            Text("Cadastrar")
         }
 
         mensagemErro?.let {

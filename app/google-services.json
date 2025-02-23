@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "162270805587",
-    "project_id": "praticapdm-5810d",
-    "storage_bucket": "praticapdm-5810d.firebasestorage.app"
+    "project_number": "1025531538124",
+    "project_id": "praticapdm-a915e",
+    "storage_bucket": "praticapdm-a915e.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:162270805587:android:b4552b40f2028a55e750a6",
+        "mobilesdk_app_id": "1:1025531538124:android:7799263ddb24240d94b069",
         "android_client_info": {
-          "package_name": "com.example.navegacao"
+          "package_name": "com.example.navegacao1"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD0N3GlnWhiIncV4wWTerqFEr9rFSEcFjE"
+          "current_key": "AIzaSyDy_6Vt3RuK_DOzpwwLz5yu4uMPeboXw8o"
         }
       ],
       "services": {
